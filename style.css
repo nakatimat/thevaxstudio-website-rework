@@ -63,9 +63,14 @@ header h1 {
     font-size: clamp(1.8em, 6vw, 3em);
     letter-spacing: -1px;
     font-weight: 800;
+    
+    /* O SEGREDO ESTÁ AQUI: */
     background: linear-gradient(135deg, #fff 0%, var(--accent) 100%);
-    /* -webkit-background-clip: text; */
-    -webkit-text-fill-color: transparent;
+    background-clip: text; /* Padrão moderno */
+    -webkit-background-clip: text; /* Compatibilidade Safari/Chrome */
+    -webkit-text-fill-color: transparent; /* Faz o preenchimento sumir para o degradê aparecer */
+    
+    display: inline-block; /* Garante que o fundo não ocupe a largura toda da tela */
 }
 
 header p {
