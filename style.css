@@ -55,7 +55,7 @@ header {
     padding: 60px 5%;
     text-align: center;
     border-bottom: 1px solid var(--border);
-    background-image: radial-gradient(circle at 50% -20%, #252a41 0%, transparent 50%);
+    /* background-image: radial-gradient(circle at 50% -20%, #252a41 0%, transparent 50%); */
 }
 
 header h1 {
