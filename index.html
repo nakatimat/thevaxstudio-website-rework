@@ -4,158 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Vax Studio – Game Programer</title>
-    <style>
-        /* Reset básico e Fontes */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-
-        /* Top Bar (Social) */
-        .top-bar {
-            background-color: #222;
-            color: white;
-            padding: 10px 10%;
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.9em;
-        }
-
-        .top-bar a {
-            color: #ddd;
-            text-decoration: none;
-            margin-left: 15px;
-        }
-
-        /* Header / Logo */
-        header {
-            background-color: #fff;
-            padding: 40px 10%;
-            border-bottom: 1px solid #eee;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-            color: #000;
-            text-transform: uppercase;
-        }
-
-        header p {
-            color: #777;
-            font-style: italic;
-        }
-
-        /* Navegação */
-        nav {
-            background: #fff;
-            border-bottom: 2px solid #333;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: inline-flex;
-        }
-
-        nav ul li a {
-            display: block;
-            padding: 15px 20px;
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-        }
-
-        nav ul li a:hover {
-            background-color: #333;
-            color: #fff;
-        }
-
-        /* Layout Principal */
-        .container {
-            display: flex;
-            padding: 40px 10%;
-            gap: 40px;
-        }
-
-        main {
-            flex: 3;
-        }
-
-        aside {
-            flex: 1;
-            background: #fff;
-            padding: 20px;
-            height: fit-content;
-            border-radius: 4px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        /* Postagem */
-        article {
-            background: #fff;
-            padding: 30px;
-            margin-bottom: 30px;
-            border-radius: 4px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        article h2 {
-            margin-top: 0;
-            color: #222;
-        }
-
-        .meta {
-            font-size: 0.8em;
-            color: #999;
-            margin-bottom: 20px;
-        }
-
-        /* Widgets Sidebar */
-        .widget {
-            margin-bottom: 30px;
-        }
-
-        .widget h3 {
-            border-bottom: 2px solid #333;
-            padding-bottom: 10px;
-            margin-bottom: 15px;
-            font-size: 1.1em;
-        }
-
-        .widget ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .widget ul li {
-            padding: 8px 0;
-            border-bottom: 1px solid #eee;
-        }
-
-        /* Rodapé */
-        footer {
-            background: #222;
-            color: #fff;
-            text-align: center;
-            padding: 30px 10%;
-            margin-top: 50px;
-        }
-
-        @media (max-width: 768px) {
-            .container { flex-direction: column; }
-            nav ul { flex-direction: column; }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -175,7 +24,7 @@
 
     <nav>
         <ul>
-            <li><a href="#">Início</a></li>
+            <li><a href="index.html">Início</a></li>
             <li><a href="#">Games</a></li>
             <li><a href="#">Anhanga's Curse</a></li>
             <li><a href="#">The Furry Tales</a></li>
@@ -193,7 +42,7 @@
                 <p>Fique atento para novidades sobre mecânicas de jogos e devlogs!</p>
             </article>
 
-            <article>
+            <article id="novidades">
                 <h2>Games Idle</h2>
                 <div class="meta">Postado em Julho de 2021</div>
                 <p>Explorando o mundo dos jogos incrementais e como eles prendem a atenção do jogador...</p>
@@ -203,7 +52,7 @@
         <aside>
             <div class="widget">
                 <h3>Pesquisar</h3>
-                <input type="text" placeholder="Pesquisar por..." style="width: 80%; padding: 8px;">
+                <input type="text" placeholder="Pesquisar por..." style="width: 100%; padding: 8px;">
             </div>
 
             <div class="widget">

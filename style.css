@@ -1,0 +1,184 @@
+/* style.css */
+
+/* Reset e Base */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Top Bar */
+.top-bar {
+    background-color: #222;
+    color: white;
+    padding: 10px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9em;
+}
+
+.top-bar a {
+    color: #ddd;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+/* Header */
+header {
+    background-color: #fff;
+    padding: 40px 5%;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: clamp(1.5em, 5vw, 2.5em); /* Fonte diminui no celular */
+    color: #000;
+    text-transform: uppercase;
+}
+
+header p {
+    color: #777;
+    font-style: italic;
+}
+
+/* Navegação */
+nav {
+    background: #fff;
+    border-bottom: 2px solid #333;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap; /* Permite quebrar linha no celular */
+    justify-content: center;
+}
+
+nav ul li a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Layout Principal */
+.container {
+    display: flex;
+    padding: 20px 5%;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+main {
+    flex: 3;
+    min-width: 0; /* Evita quebra de layout com códigos longos */
+}
+
+aside {
+    flex: 1;
+    background: #fff;
+    padding: 20px;
+    height: fit-content;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Postagem e Artigos */
+article {
+    background: #fff;
+    padding: clamp(15px, 5%, 30px);
+    margin-bottom: 30px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+article h2 {
+    margin-top: 0;
+    color: #222;
+}
+
+.meta {
+    font-size: 0.8em;
+    color: #999;
+    margin-bottom: 20px;
+}
+
+/* Widgets */
+.widget {
+    margin-bottom: 30px;
+}
+
+.widget h3 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.widget ul {
+    list-style: none;
+    padding: 0;
+}
+
+.widget ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+/* Rodapé */
+footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 30px 5%;
+    margin-top: 50px;
+}
+
+/* --- RESPONSIVIDADE (CELULAR) --- */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Sidebar vai para baixo do conteúdo */
+    }
+
+    .top-bar {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column; /* Menu vira lista vertical */
+    }
+
+    nav ul li {
+        border-bottom: 1px solid #eee;
+        width: 100%;
+    }
+
+    aside {
+        order: 2; /* Garante que o sidebar fique abaixo no mobile */
+    }
+}
